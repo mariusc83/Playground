@@ -1,0 +1,155 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'findbugs'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "org.mariusc.gitdemo"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'gitdemo2-alias'
+            keyPassword 'testalias12345'
+            storeFile file('../keys/gitdemo2.jks')
+            storePassword 'test12345'
+        }
+
+        debug {
+            storeFile file('../keys/debug.keystore')
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+
+    dataBinding {
+        enabled true
+    }
+
+    lintOptions {
+        lintConfig file('../lint/lint.xml')
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+        incremental false
+    }
+
+    sourceSets {
+        main.java.srcDirs += "src/main/kotlin"
+        androidTest.java.srcDirs += "src/androidTest/kotlin"
+        test.java.srcDirs += "src/test/kotlin"
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
+}
+
+
+kapt {
+    generateStubs = true
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(":modules:data")
+    compile project(":modules:system")
+    compile rootProject.libraries.android_support
+    compile rootProject.libraries.recyclerview
+    compile rootProject.libraries.constraintLayout
+    compile rootProject.libraries.cardview
+    compile rootProject.libraries.annotations
+    compile rootProject.libraries.rxjava
+    compile rootProject.libraries.rxandroid
+    compile rootProject.libraries.rxbindings
+    compile rootProject.libraries.retrofit
+    compile rootProject.libraries.retrofit_adapter
+    compile rootProject.libraries.glide
+
+    // databinding
+    kapt rootProject.libraries.databinding_compiler;
+
+    // dagger
+    compile rootProject.libraries.dagger
+    kapt rootProject.libraries.dagger_compiler
+
+    androidTestCompile rootProject.libraries.android_tests
+
+    testCompile rootProject.libraries.unit_tests
+
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+}
+
+/*
+task classpath {
+    from android.sourceSets.main.java.srcDirs,
+            android.sourceSets.test.java.srcDirs
+    outputs.upToDateWhen { false }
+    doLast {
+        println "Building classpath..."
+        def cp2 = [android.getBootClasspath()[0], it.archivePath]
+*/
+/*        android.applicationVariants.all { v ->
+            cp2 += v.getApkLibraries()
+        }*//*
+
+        def classpath = cp2.unique().join(":")
+        println classpath
+    }
+}
+*/
+
+android.applicationVariants.all { variant ->
+    task("findbugs${variant.name.capitalize()}", type: FindBugs) {
+        description "Analyze ${variant.name} code with the findbugs tool"
+        group "Verification"
+
+        ignoreFailures = true
+        effort = "default"
+        reportLevel = "medium"
+
+        classes = files("$project.buildDir/intermediates/classes/${variant.dirName}")
+        excludeFilter = file("$rootProject.rootDir/findbugs/findbugs-filter.xml")
+        source = variant.javaCompile.source
+        classpath = variant.javaCompile.classpath
+
+        reports {
+            // Only one of HTML or XML can be turned on at the same time
+            html.enabled = true
+            xml.enabled = !html.enabled
+            xml.withMessages = true
+
+            html.destination = "$project.buildDir/outputs/findbugs/findbugs-${variant.name}-output.html"
+            xml.destination = "$project.buildDir/outputs/findbugs/findbugs-${variant.name}-output.xml"
+        }
+
+        dependsOn "assemble${variant.name.capitalize()}"
+
+    }
+    check.dependsOn("findbugs${variant.name.capitalize()}")
+}
+repositories {
+    mavenCentral()
+}
+
+// TODO add also Jacoco configuration here for Jenkins

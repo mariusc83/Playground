@@ -1,0 +1,155 @@
+ext {
+    versionName = "1.0"
+
+    //build properties :
+    buildToolsVersion = '26.0.1'
+    compileSdkVersion = 26
+    minSdkVersion = 19
+    targetSdkVersion = 26
+    supportLibsVersion = '25.0.1'
+    androidPluginForGradleVersion = '2.3.3'
+    kotlin_version = '1.1.4-2'
+
+    // libs
+    constraintLayoutVersion = '1.0.2'
+    glideVersion = '3.7.0'
+    daggerVersion = '2.10'
+    rxJavaVersion = '2.0.8'
+    rxBindingsVersion = '2.0.0'
+    rxAndroidVersion = '2.0.1'
+    autoValueVersion = '1.2-rc1'
+    javaXAnnotationVersion = '10.0-b28'
+    autoValueVersion = '1.3'
+    paperParcelVersion = '2.0.1'
+    retrofitVersion = '2.2.0'
+    gsonAutoValueVersion = '0.4.6'
+    architectureComponentsVersion = '1.0.0-alpha7'
+
+    // testing
+    mockitoVersion = '2.7.21'
+    robolectricVersion = '3.3.2'
+    assertJCoreVersion = '3.6.2'
+    jUnitVersion = "4.12"
+    espressoVersion = "2.2.2"
+    kotlinMockitoVersion = '1.4.0'
+    kotlinSpeckVersion = '1.1.2'
+    spoonGradlePluginVersion = '1.2.2'
+    spoonClientVersion = '1.7.1'
+    jUnitPlatformVersion = '1.0.0-M4'
+    androidSupportTestVersion = '1.0.0'
+    androidSupportTestRulesVersion = '1.0.0'
+
+    libraries = [
+            android_support     : [
+                    "com.android.support:support-v4:$supportLibsVersion",
+                    "com.android.support:appcompat-v7:$supportLibsVersion",
+                    "com.android.support:mediarouter-v7:$supportLibsVersion"
+            ],
+            gridlayout          : "com.android.support:gridlayout-v7:$supportLibsVersion",
+            recyclerview        : "com.android.support:recyclerview-v7:$supportLibsVersion",
+            constraintLayout    : "com.android.support.constraint:constraint-layout:$constraintLayoutVersion",
+            cardview            : "com.android.support:cardview-v7:$supportLibsVersion",
+            annotations         : "com.android.support:support-annotations:$supportLibsVersion",
+            design              : "com.android.support:design:$supportLibsVersion",
+
+            glide               : "com.github.bumptech.glide:glide:$glideVersion",
+
+            rxjava              : "io.reactivex.rxjava2:rxjava:$rxJavaVersion",
+            rxandroid           : "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion",
+            rxbindings          : [
+                    "com.jakewharton.rxbinding2:rxbinding-support-v4:$rxBindingsVersion",
+                    "com.jakewharton.rxbinding2:rxbinding:$rxBindingsVersion"
+            ],
+            dagger_compiler     : "com.google.dagger:dagger-compiler:$daggerVersion",
+            dagger              : [
+                    "com.google.dagger:dagger:$daggerVersion",
+                    "com.google.dagger:dagger-android-support:$daggerVersion"
+            ],
+            autovalue_compiler  : "com.google.auto.value:auto-value:$autoValueVersion",
+            autovalue           : "com.google.auto.value:auto-value:$autoValueVersion",
+            autovalue_gson      : "com.ryanharter.auto.value:auto-value-gson:$gsonAutoValueVersion",
+            paperparcel_compiler: "nz.bradcampbell:paperparcel-compiler:$paperParcelVersion",
+            paperparcel         : "nz.bradcampbell:paperparcel:$paperParcelVersion",
+            android_tests       : [
+                    dependencies.create("com.android.support.test" +
+                            ".espresso:espresso-core:$espressoVersion") {
+                        exclude group: 'com.android.support', module: 'support-annotations'
+                        exclude group: 'com.google.code.findbugs'
+                    },
+                    "com.squareup.spoon:spoon-client:$spoonClientVersion",
+                    "junit:junit:${jUnitVersion}",
+                    dependencies.create("com.android.support.test:runner:${androidSupportTestVersion}") {
+                        exclude module: 'support-annotations'
+                    },
+                    dependencies.create("com.android.support.test:rules:${androidSupportTestRulesVersion}") {
+                        exclude module: 'support-annotations'
+                    }
+
+            ],
+            retrofit_adapter    : "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion",
+            retrofit            : "com.squareup.retrofit2:converter-gson:$retrofitVersion",
+            databinding_compiler: "com.android.databinding:compiler:$androidPluginForGradleVersion",
+
+            unit_tests          : [
+                    // TEST LIBRARIES
+                    "junit:junit:$jUnitVersion",
+                    dependencies.create("org.robolectric:robolectric:$robolectricVersion") {
+                        exclude module: 'classworlds'
+                        exclude module: 'maven-artifact'
+                        exclude module: 'maven-artifact-manager'
+                        exclude module: 'maven-error-diagnostics'
+                        exclude module: 'maven-model'
+                        exclude module: 'maven-plugin-registry'
+                        exclude module: 'maven-profile'
+                        exclude module: 'maven-project'
+                        exclude module: 'maven-settings'
+                        exclude module: 'nekohtml'
+                        exclude module: 'plexus-container-default'
+                        exclude module: 'plexus-interpolation'
+                        exclude module: 'plexus-utils'
+                        exclude module: 'wagon-file'
+                        exclude module: 'wagon-http-lightweight'
+                        exclude module: 'wagon-http-shared'
+                        exclude module: 'wagon-provider-api'
+                        exclude group: 'com.android.support', module: 'support-v4'
+                        exclude group: 'commons-logging'
+                        exclude group: 'org.apache.httpcomponents'
+                    },
+
+                    // MOCKING
+                    "org.mockito:mockito-core:$mockitoVersion",
+                    dependencies.create("com.nhaarman:mockito-kotlin:$kotlinMockitoVersion") {
+                        exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib'
+                    }
+                    ,
+                    dependencies.create("org.jetbrains.spek:spek-api:$kotlinSpeckVersion") {
+                        exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib'
+                    },
+                    dependencies.create("org.jetbrains.spek:spek-subject-extension:$kotlinSpeckVersion") {
+                        exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib'
+                    },
+                    dependencies.create("org.jetbrains.spek:spek-junit-platform-engine:$kotlinSpeckVersion") {
+                        exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib'
+                    },
+                    dependencies.create("org.junit.platform:junit-platform-runner:$jUnitPlatformVersion") {
+                        exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib'
+                    },
+
+                    // ASSERTS
+                    "org.assertj:assertj-core:$assertJCoreVersion",
+
+            ],
+
+            architecture_api    : [
+                    "android.arch.lifecycle:runtime:$architectureComponentsVersion",
+                    "android.arch.lifecycle:extensions:$architectureComponentsVersion",
+                    "android.arch.persistence.room:rxjava2:$architectureComponentsVersion",
+                    "android.arch.persistence.room:runtime:$architectureComponentsVersion"
+            ],
+
+            architecture_kapt   : [
+                    "android.arch.persistence.room:compiler:$architectureComponentsVersion",
+                    "android.arch.lifecycle:compiler:$architectureComponentsVersion"
+            ]
+    ]
+}

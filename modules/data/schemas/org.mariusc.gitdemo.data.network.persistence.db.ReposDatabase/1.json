@@ -1,0 +1,52 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "735de5be1021129a0b2a525c140c5ae6",
+    "entities": [
+      {
+        "tableName": "pages",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`has_more` INTEGER, `is_first` INTEGER, `current_since` TEXT, `next_since` TEXT, `has_next` INTEGER, PRIMARY KEY(`current_since`))",
+        "fields": [
+          {
+            "fieldPath": "hasMore",
+            "columnName": "has_more",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "isFirst",
+            "columnName": "is_first",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "pageInfo.currentSince",
+            "columnName": "current_since",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "pageInfo.nextSince",
+            "columnName": "next_since",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "pageInfo.hasNext",
+            "columnName": "has_next",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "current_since"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"735de5be1021129a0b2a525c140c5ae6\")"
+    ]
+  }
+}

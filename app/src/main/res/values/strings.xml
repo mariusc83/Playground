@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">GitDemo</string>
+    <string name="no_internet_connection">No connection available</string>
+    <string name="bad_request_or_server_error">Bad request or server error</string>
+    <string name="by_label">By:\u0020</string>
+</resources>

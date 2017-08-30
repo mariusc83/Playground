@@ -1,0 +1,361 @@
+{
+  "title": "Spoon Execution",
+  "started": 1500562039775,
+  "duration": 14,
+  "results": {
+    "emulator-5554": {
+      "installFailed": false,
+      "deviceDetails": {
+        "model": "Android SDK built for x86_64",
+        "manufacturer": "unknown",
+        "version": "7.1.1",
+        "apiLevel": 25,
+        "isEmulator": true,
+        "avdName": "Nexus_5X_API_25"
+      },
+      "testResults": [
+        [
+          {
+            "className": "org.mariusc.gitdemo.view.main.MainActivityTest",
+            "methodName": "on_activity_resumed_the_layout_is_correct"
+          },
+          {
+            "status": "PASS",
+            "duration": 2,
+            "screenshots": [],
+            "files": [],
+            "log": [
+              {
+                "mHeader": {
+                  "mLogLevel": "INFO",
+                  "mPid": 7004,
+                  "mTid": 7019,
+                  "mAppName": "?",
+                  "mTag": "TestRunner",
+                  "mTimestamp": {
+                    "mMonth": 7,
+                    "mDay": 20,
+                    "mHour": 14,
+                    "mMinute": 47,
+                    "mSecond": 30,
+                    "mMilli": 146
+                  }
+                },
+                "mMessage": "started: on_activity_resumed_the_layout_is_correct(org.mariusc.gitdemo.view.main.MainActivityTest)"
+              },
+              {
+                "mHeader": {
+                  "mLogLevel": "INFO",
+                  "mPid": 7004,
+                  "mTid": 7004,
+                  "mAppName": "?",
+                  "mTag": "MonitoringInstrumentation",
+                  "mTimestamp": {
+                    "mMonth": 7,
+                    "mDay": 20,
+                    "mHour": 14,
+                    "mMinute": 47,
+                    "mSecond": 30,
+                    "mMilli": 148
+                  }
+                },
+                "mMessage": "Activities that are still in CREATED to STOPPED: 0"
+              },
+              {
+                "mHeader": {
+                  "mLogLevel": "DEBUG",
+                  "mPid": 7004,
+                  "mTid": 7019,
+                  "mAppName": "?",
+                  "mTag": "ActivityTestRule",
+                  "mTimestamp": {
+                    "mMonth": 7,
+                    "mDay": 20,
+                    "mHour": 14,
+                    "mMinute": 47,
+                    "mSecond": 30,
+                    "mMilli": 149
+                  }
+                },
+                "mMessage": "Launching activity org.mariusc.gitdemo.view.main.MainActivity"
+              },
+              {
+                "mHeader": {
+                  "mLogLevel": "DEBUG",
+                  "mPid": 7004,
+                  "mTid": 7021,
+                  "mAppName": "?",
+                  "mTag": "MonitoringInstrumentation",
+                  "mTimestamp": {
+                    "mMonth": 7,
+                    "mDay": 20,
+                    "mHour": 14,
+                    "mMinute": 47,
+                    "mSecond": 30,
+                    "mMilli": 154
+                  }
+                },
+                "mMessage": "execStartActivity(context, ibinder, ibinder, activity, intent, int, bundle"
+              },
+              {
+                "mHeader": {
+                  "mLogLevel": "DEBUG",
+                  "mPid": 7004,
+                  "mTid": 7004,
+                  "mAppName": "?",
+                  "mTag": "LifecycleMonitor",
+                  "mTimestamp": {
+                    "mMonth": 7,
+                    "mDay": 20,
+                    "mHour": 14,
+                    "mMinute": 47,
+                    "mSecond": 30,
+                    "mMilli": 391
+                  }
+                },
+                "mMessage": "Lifecycle status change: org.mariusc.gitdemo.view.main.MainActivity@9c42cf0 in: PRE_ON_CREATE"
+              },
+              {
+                "mHeader": {
+                  "mLogLevel": "WARN",
+                  "mPid": 7004,
+                  "mTid": 7004,
+                  "mAppName": "?",
+                  "mTag": "art",
+                  "mTimestamp": {
+                    "mMonth": 7,
+                    "mDay": 20,
+                    "mHour": 14,
+                    "mMinute": 47,
+                    "mSecond": 30,
+                    "mMilli": 395
+                  }
+                },
+                "mMessage": "Before Android 4.1, method android.graphics.PorterDuffColorFilter android.support.graphics.drawable.VectorDrawableCompat.updateTintFilter(android.graphics.PorterDuffColorFilter, android.content.res.ColorStateList, android.graphics.PorterDuff$Mode) would have incorrectly overridden the package-private method in android.graphics.drawable.Drawable"
+              },
+              {
+                "mHeader": {
+                  "mLogLevel": "DEBUG",
+                  "mPid": 7004,
+                  "mTid": 7004,
+                  "mAppName": "?",
+                  "mTag": "LifecycleMonitor",
+                  "mTimestamp": {
+                    "mMonth": 7,
+                    "mDay": 20,
+                    "mHour": 14,
+                    "mMinute": 47,
+                    "mSecond": 30,
+                    "mMilli": 447
+                  }
+                },
+                "mMessage": "Lifecycle status change: org.mariusc.gitdemo.view.main.MainActivity@9c42cf0 in: CREATED"
+              },
+              {
+                "mHeader": {
+                  "mLogLevel": "DEBUG",
+                  "mPid": 7004,
+                  "mTid": 7004,
+                  "mAppName": "?",
+                  "mTag": "dagger.android.support",
+                  "mTimestamp": {
+                    "mMonth": 7,
+                    "mDay": 20,
+                    "mHour": 14,
+                    "mMinute": 47,
+                    "mSecond": 30,
+                    "mMilli": 450
+                  }
+                },
+                "mMessage": "An injector for org.mariusc.gitdemo.view.main.repos.ReposFragment was found in org.mariusc.gitdemo.view.main.MainActivity"
+              },
+              {
+                "mHeader": {
+                  "mLogLevel": "DEBUG",
+                  "mPid": 7004,
+                  "mTid": 7004,
+                  "mAppName": "?",
+                  "mTag": "NetworkSecurityConfig",
+                  "mTimestamp": {
+                    "mMonth": 7,
+                    "mDay": 20,
+                    "mHour": 14,
+                    "mMinute": 47,
+                    "mSecond": 30,
+                    "mMilli": 481
+                  }
+                },
+                "mMessage": "No Network Security Config specified, using platform default"
+              },
+              {
+                "mHeader": {
+                  "mLogLevel": "DEBUG",
+                  "mPid": 7004,
+                  "mTid": 7004,
+                  "mAppName": "?",
+                  "mTag": "LifecycleMonitor",
+                  "mTimestamp": {
+                    "mMonth": 7,
+                    "mDay": 20,
+                    "mHour": 14,
+                    "mMinute": 47,
+                    "mSecond": 30,
+                    "mMilli": 549
+                  }
+                },
+                "mMessage": "Lifecycle status change: org.mariusc.gitdemo.view.main.MainActivity@9c42cf0 in: STARTED"
+              },
+              {
+                "mHeader": {
+                  "mLogLevel": "DEBUG",
+                  "mPid": 7004,
+                  "mTid": 7004,
+                  "mAppName": "?",
+                  "mTag": "LifecycleMonitor",
+                  "mTimestamp": {
+                    "mMonth": 7,
+                    "mDay": 20,
+                    "mHour": 14,
+                    "mMinute": 47,
+                    "mSecond": 30,
+                    "mMilli": 555
+                  }
+                },
+                "mMessage": "Lifecycle status change: org.mariusc.gitdemo.view.main.MainActivity@9c42cf0 in: RESUMED"
+              },
+              {
+                "mHeader": {
+                  "mLogLevel": "INFO",
+                  "mPid": 7004,
+                  "mTid": 7033,
+                  "mAppName": "?",
+                  "mTag": "OpenGLRenderer",
+                  "mTimestamp": {
+                    "mMonth": 7,
+                    "mDay": 20,
+                    "mHour": 14,
+                    "mMinute": 47,
+                    "mSecond": 30,
+                    "mMilli": 755
+                  }
+                },
+                "mMessage": "Initialized EGL, version 1.4"
+              },
+              {
+                "mHeader": {
+                  "mLogLevel": "DEBUG",
+                  "mPid": 7004,
+                  "mTid": 7033,
+                  "mAppName": "?",
+                  "mTag": "OpenGLRenderer",
+                  "mTimestamp": {
+                    "mMonth": 7,
+                    "mDay": 20,
+                    "mHour": 14,
+                    "mMinute": 47,
+                    "mSecond": 30,
+                    "mMilli": 755
+                  }
+                },
+                "mMessage": "Swap behavior 1"
+              },
+              {
+                "mHeader": {
+                  "mLogLevel": "WARN",
+                  "mPid": 7004,
+                  "mTid": 7033,
+                  "mAppName": "?",
+                  "mTag": "OpenGLRenderer",
+                  "mTimestamp": {
+                    "mMonth": 7,
+                    "mDay": 20,
+                    "mHour": 14,
+                    "mMinute": 47,
+                    "mSecond": 30,
+                    "mMilli": 755
+                  }
+                },
+                "mMessage": "Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without..."
+              },
+              {
+                "mHeader": {
+                  "mLogLevel": "DEBUG",
+                  "mPid": 7004,
+                  "mTid": 7033,
+                  "mAppName": "?",
+                  "mTag": "OpenGLRenderer",
+                  "mTimestamp": {
+                    "mMonth": 7,
+                    "mDay": 20,
+                    "mHour": 14,
+                    "mMinute": 47,
+                    "mSecond": 30,
+                    "mMilli": 755
+                  }
+                },
+                "mMessage": "Swap behavior 0"
+              },
+              {
+                "mHeader": {
+                  "mLogLevel": "DEBUG",
+                  "mPid": 7004,
+                  "mTid": 7019,
+                  "mAppName": "?",
+                  "mTag": "InputManagerEventInjectionStrategy",
+                  "mTimestamp": {
+                    "mMonth": 7,
+                    "mDay": 20,
+                    "mHour": 14,
+                    "mMinute": 47,
+                    "mSecond": 32,
+                    "mMilli": 332
+                  }
+                },
+                "mMessage": "Creating injection strategy with input manager."
+              },
+              {
+                "mHeader": {
+                  "mLogLevel": "DEBUG",
+                  "mPid": 7004,
+                  "mTid": 7004,
+                  "mAppName": "?",
+                  "mTag": "LifecycleMonitor",
+                  "mTimestamp": {
+                    "mMonth": 7,
+                    "mDay": 20,
+                    "mHour": 14,
+                    "mMinute": 47,
+                    "mSecond": 32,
+                    "mMilli": 354
+                  }
+                },
+                "mMessage": "Lifecycle status change: org.mariusc.gitdemo.view.main.MainActivity@9c42cf0 in: PAUSED"
+              },
+              {
+                "mHeader": {
+                  "mLogLevel": "INFO",
+                  "mPid": 7004,
+                  "mTid": 7019,
+                  "mAppName": "?",
+                  "mTag": "TestRunner",
+                  "mTimestamp": {
+                    "mMonth": 7,
+                    "mDay": 20,
+                    "mHour": 14,
+                    "mMinute": 47,
+                    "mSecond": 32,
+                    "mMilli": 355
+                  }
+                },
+                "mMessage": "finished: on_activity_resumed_the_layout_is_correct(org.mariusc.gitdemo.view.main.MainActivityTest)"
+              }
+            ]
+          }
+        ]
+      ],
+      "started": 1500562039783,
+      "duration": 2,
+      "exceptions": []
+    }
+  }
+}
