@@ -1,0 +1,58 @@
+Traceback (most recent call last):
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\systrace.py", line 49, in <module>
+    sys.exit(run_systrace.main())
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\catapult\systrace\systrace\run_systrace.py", line 194, in main
+    main_impl(sys.argv)
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\catapult\systrace\systrace\run_systrace.py", line 174, in main_impl
+    controller.StartTracing()
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\catapult\systrace\systrace\systrace_runner.py", line 44, in StartTracing
+    self._tracing_controller.StartTracing()
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\catapult\systrace\systrace\tracing_controller.py", line 146, in StartTracing
+    timeout=self._controller_config.timeout):
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\catapult\common\py_utils\py_utils\__init__.py", line 85, in RunWithTimeout
+    return timeout_retry.Run(func, timeout, 0, args=args)
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\catapult\systrace\systrace\..\..\devil\devil\utils\timeout_retry.py", line 159, in Run
+    error_log_func=error_log_func)
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\catapult\systrace\systrace\..\..\devil\devil\utils\reraiser_thread.py", line 186, in JoinAll
+    self._JoinAll(watcher, timeout)
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\catapult\systrace\systrace\..\..\devil\devil\utils\reraiser_thread.py", line 158, in _JoinAll
+    thread.ReraiseIfException()
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\catapult\systrace\systrace\..\..\devil\devil\utils\reraiser_thread.py", line 81, in run
+    self._ret = self._func(*self._args, **self._kwargs)
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\catapult\systrace\systrace\..\..\devil\devil\utils\timeout_retry.py", line 152, in <lambda>
+    child_thread = reraiser_thread.ReraiserThread(lambda: func(*args, **kwargs),
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\catapult\systrace\systrace\tracing_agents\atrace_agent.py", line 174, in StartAgentTracing
+    avail_cats = get_available_categories(config, self._device_sdk_version)
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\catapult\systrace\systrace\tracing_agents\atrace_agent.py", line 73, in get_available_categories
+    LIST_CATEGORIES_ARGS, check_return=True)
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\catapult\systrace\systrace\..\..\devil\devil\android\decorators.py", line 51, in timeout_retry_wrapper
+    return impl()
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\catapult\systrace\systrace\..\..\devil\devil\android\decorators.py", line 47, in impl
+    return f(*args, **kwargs)
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\catapult\systrace\systrace\..\..\devil\devil\android\device_utils.py", line 969, in RunShellCommand
+    output = handle_large_output(cmd, large_output)
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\catapult\systrace\systrace\..\..\devil\devil\android\device_utils.py", line 938, in handle_large_output
+    return handle_large_command(cmd)
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\catapult\systrace\systrace\..\..\devil\devil\android\device_utils.py", line 920, in handle_large_command
+    return handle_check_return(cmd)
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\catapult\systrace\systrace\..\..\devil\devil\android\device_utils.py", line 911, in handle_check_return
+    return run(cmd)
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\catapult\systrace\systrace\..\..\devil\devil\android\device_utils.py", line 907, in run
+    return self.adb.Shell(cmd)
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\catapult\systrace\systrace\..\..\devil\devil\android\sdk\adb_wrapper.py", line 485, in Shell
+    output = self._RunDeviceAdbCmd(args, timeout, retries, check_error=False)
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\catapult\systrace\systrace\..\..\devil\devil\android\sdk\adb_wrapper.py", line 282, in _RunDeviceAdbCmd
+    check_error=check_error)
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\catapult\systrace\systrace\..\..\devil\devil\android\decorators.py", line 51, in timeout_retry_wrapper
+    return impl()
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\catapult\systrace\systrace\..\..\devil\devil\android\decorators.py", line 47, in impl
+    return f(*args, **kwargs)
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\catapult\systrace\systrace\..\..\devil\devil\android\sdk\adb_wrapper.py", line 249, in _RunAdbCmd
+    timeout_retry.CurrentTimeoutThreadGroup().GetRemainingTime())
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\catapult\systrace\systrace\..\..\devil\devil\utils\cmd_helper.py", line 313, in GetCmdStatusAndOutputWithTimeout
+    stderr=subprocess.STDOUT)
+  File "C:\Users\MConstantin\AppData\Local\Android\sdk\platform-tools\systrace\catapult\systrace\systrace\..\..\devil\devil\utils\cmd_helper.py", line 105, in Popen
+    shell=shell, close_fds=True, env=env, preexec_fn=preexec_fn)
+  File "C:\Python27\lib\subprocess.py", line 667, in __init__
+    raise ValueError("close_fds is not supported on Windows "
+ValueError: close_fds is not supported on Windows platforms if you redirect stdin/stdout/stderr

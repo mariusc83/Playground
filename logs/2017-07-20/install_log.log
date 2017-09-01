@@ -1,0 +1,188 @@
+NDK is missing a "platforms" directory.
+If you are using NDK, verify the ndk.dir is set to a valid NDK directory.  It is currently set to C:\Users\MConstantin\AppData\Local\Android\sdk\ndk-bundle.
+If you are not using NDK, unset the NDK variable from ANDROID_NDK_HOME or local.properties to remove this warning.
+
+NDK is missing a "platforms" directory.
+If you are using NDK, verify the ndk.dir is set to a valid NDK directory.  It is currently set to C:\Users\MConstantin\AppData\Local\Android\sdk\ndk-bundle.
+If you are not using NDK, unset the NDK variable from ANDROID_NDK_HOME or local.properties to remove this warning.
+
+NDK is missing a "platforms" directory.
+If you are using NDK, verify the ndk.dir is set to a valid NDK directory.  It is currently set to C:\Users\MConstantin\AppData\Local\Android\sdk\ndk-bundle.
+If you are not using NDK, unset the NDK variable from ANDROID_NDK_HOME or local.properties to remove this warning.
+
+'kapt.generateStubs' is not used by the 'kotlin-kapt' plugin
+'kapt.generateStubs' is not used by the 'kotlin-kapt' plugin
+'kapt.generateStubs' is not used by the 'kotlin-kapt' plugin
+'kapt.generateStubs' is not used by the 'kotlin-kapt' plugin
+:app:preBuild UP-TO-DATE
+:app:preDebugBuild UP-TO-DATE
+:app:checkDebugManifest
+:app:extractProguardFiles
+:app:preReleaseBuild
+:app:prepareComAndroidDatabindingAdapters131Library
+:app:prepareComAndroidDatabindingLibrary131Library
+:app:prepareComAndroidSupportAnimatedVectorDrawable2501Library
+:app:prepareComAndroidSupportAppcompatV72501Library
+:app:prepareComAndroidSupportCardviewV72501Library
+:app:prepareComAndroidSupportConstraintConstraintLayout102Library
+:app:prepareComAndroidSupportMediarouterV72501Library
+:app:prepareComAndroidSupportPaletteV72501Library
+:app:prepareComAndroidSupportRecyclerviewV72501Library
+:app:prepareComAndroidSupportSupportCompat2511Library
+:app:prepareComAndroidSupportSupportCoreUi2511Library
+:app:prepareComAndroidSupportSupportCoreUtils2501Library
+:app:prepareComAndroidSupportSupportFragment2501Library
+:app:prepareComAndroidSupportSupportMediaCompat2501Library
+:app:prepareComAndroidSupportSupportV42501Library
+:app:prepareComAndroidSupportSupportVectorDrawable2501Library
+:app:prepareComGoogleDaggerDaggerAndroid210Library
+:app:prepareComGoogleDaggerDaggerAndroidSupport210Library
+:app:prepareComJakewhartonRxbinding2Rxbinding200Library
+:app:prepareComJakewhartonRxbinding2RxbindingSupportV4200Library
+:app:prepareIoReactivexRxjava2Rxandroid201Library
+:modules:data:preBuild UP-TO-DATE
+:modules:data:preReleaseBuild UP-TO-DATE
+:modules:data:checkReleaseManifest
+:modules:data:preDebugAndroidTestBuild UP-TO-DATE
+:modules:data:preDebugBuild UP-TO-DATE
+:modules:data:preDebugUnitTestBuild UP-TO-DATE
+:modules:data:preReleaseUnitTestBuild UP-TO-DATE
+:modules:data:prepareComAndroidSupportAnimatedVectorDrawable2501Library
+:modules:data:prepareComAndroidSupportAppcompatV72501Library
+:modules:data:prepareComAndroidSupportMediarouterV72501Library
+:modules:data:prepareComAndroidSupportPaletteV72501Library
+:modules:data:prepareComAndroidSupportSupportCompat2501Library
+:modules:data:prepareComAndroidSupportSupportCoreUi2501Library
+:modules:data:prepareComAndroidSupportSupportCoreUtils2501Library
+:modules:data:prepareComAndroidSupportSupportFragment2501Library
+:modules:data:prepareComAndroidSupportSupportMediaCompat2501Library
+:modules:data:prepareComAndroidSupportSupportV42501Library
+:modules:data:prepareComAndroidSupportSupportVectorDrawable2501Library
+:modules:data:prepareComGoogleDaggerDaggerAndroid210Library
+:modules:data:prepareComGoogleDaggerDaggerAndroidSupport210Library
+:modules:system:preBuild UP-TO-DATE
+:modules:system:preReleaseBuild UP-TO-DATE
+:modules:system:checkReleaseManifest
+:modules:system:preDebugAndroidTestBuild UP-TO-DATE
+:modules:system:preDebugBuild UP-TO-DATE
+:modules:system:preDebugUnitTestBuild UP-TO-DATE
+:modules:system:preReleaseUnitTestBuild UP-TO-DATE
+:modules:system:prepareComAndroidSupportAnimatedVectorDrawable2501Library
+:modules:system:prepareComAndroidSupportAppcompatV72501Library
+:modules:system:prepareComAndroidSupportMediarouterV72501Library
+:modules:system:prepareComAndroidSupportPaletteV72501Library
+:modules:system:prepareComAndroidSupportSupportCompat2501Library
+:modules:system:prepareComAndroidSupportSupportCoreUi2501Library
+:modules:system:prepareComAndroidSupportSupportCoreUtils2501Library
+:modules:system:prepareComAndroidSupportSupportFragment2501Library
+:modules:system:prepareComAndroidSupportSupportMediaCompat2501Library
+:modules:system:prepareComAndroidSupportSupportV42501Library
+:modules:system:prepareComAndroidSupportSupportVectorDrawable2501Library
+:modules:system:prepareReleaseDependencies
+:modules:system:compileReleaseAidl UP-TO-DATE
+:modules:system:compileReleaseNdk NO-SOURCE
+:modules:system:compileLint UP-TO-DATE
+:modules:system:copyReleaseLint NO-SOURCE
+:modules:system:compileReleaseRenderscript UP-TO-DATE
+:modules:system:generateReleaseBuildConfig UP-TO-DATE
+:modules:system:generateReleaseResValues UP-TO-DATE
+:modules:system:generateReleaseResources UP-TO-DATE
+:modules:system:mergeReleaseResources UP-TO-DATE
+:modules:system:processReleaseManifest UP-TO-DATE
+:modules:system:processReleaseResources UP-TO-DATE
+:modules:system:generateReleaseSources UP-TO-DATE
+:modules:system:incrementalReleaseJavaCompilationSafeguard UP-TO-DATE
+:modules:system:javaPreCompileRelease
+:modules:system:kaptGenerateStubsReleaseKotlin UP-TO-DATE
+:modules:system:kaptReleaseKotlin UP-TO-DATE
+:modules:system:compileReleaseKotlin UP-TO-DATE
+:modules:system:compileReleaseJavaWithJavac UP-TO-DATE
+:modules:system:copyReleaseKotlinClasses UP-TO-DATE
+:modules:system:extractReleaseAnnotations UP-TO-DATE
+:modules:system:mergeReleaseShaders UP-TO-DATE
+:modules:system:compileReleaseShaders UP-TO-DATE
+:modules:system:generateReleaseAssets UP-TO-DATE
+:modules:system:mergeReleaseAssets UP-TO-DATE
+:modules:system:mergeReleaseProguardFiles UP-TO-DATE
+:modules:system:packageReleaseRenderscript NO-SOURCE
+:modules:system:packageReleaseResources UP-TO-DATE
+:modules:system:processReleaseJavaRes NO-SOURCE
+:modules:system:transformResourcesWithMergeJavaResForRelease UP-TO-DATE
+:modules:system:transformClassesAndResourcesWithSyncLibJarsForRelease UP-TO-DATE
+:modules:system:mergeReleaseJniLibFolders UP-TO-DATE
+:modules:system:transformNativeLibsWithMergeJniLibsForRelease UP-TO-DATE
+:modules:system:transformNativeLibsWithSyncJniLibsForRelease UP-TO-DATE
+:modules:system:bundleRelease UP-TO-DATE
+:modules:data:prepareReleaseDependencies
+:modules:data:compileReleaseAidl UP-TO-DATE
+:modules:data:compileReleaseNdk NO-SOURCE
+:modules:data:compileLint UP-TO-DATE
+:modules:data:copyReleaseLint NO-SOURCE
+:modules:data:compileReleaseRenderscript UP-TO-DATE
+:modules:data:generateReleaseBuildConfig UP-TO-DATE
+:modules:data:generateReleaseResValues UP-TO-DATE
+:modules:data:generateReleaseResources UP-TO-DATE
+:modules:data:mergeReleaseResources UP-TO-DATE
+:modules:data:processReleaseManifest UP-TO-DATE
+:modules:data:processReleaseResources UP-TO-DATE
+:modules:data:generateReleaseSources UP-TO-DATE
+:modules:data:incrementalReleaseJavaCompilationSafeguard UP-TO-DATE
+:modules:data:javaPreCompileRelease
+:modules:data:kaptGenerateStubsReleaseKotlin UP-TO-DATE
+:modules:data:kaptReleaseKotlin UP-TO-DATE
+:modules:data:compileReleaseKotlin UP-TO-DATE
+:modules:data:compileReleaseJavaWithJavac UP-TO-DATE
+:modules:data:copyReleaseKotlinClasses UP-TO-DATE
+:modules:data:extractReleaseAnnotations UP-TO-DATE
+:modules:data:mergeReleaseShaders UP-TO-DATE
+:modules:data:compileReleaseShaders UP-TO-DATE
+:modules:data:generateReleaseAssets UP-TO-DATE
+:modules:data:mergeReleaseAssets UP-TO-DATE
+:modules:data:mergeReleaseProguardFiles UP-TO-DATE
+:modules:data:packageReleaseRenderscript NO-SOURCE
+:modules:data:packageReleaseResources UP-TO-DATE
+:modules:data:processReleaseJavaRes NO-SOURCE
+:modules:data:transformResourcesWithMergeJavaResForRelease UP-TO-DATE
+:modules:data:transformClassesAndResourcesWithSyncLibJarsForRelease UP-TO-DATE
+:modules:data:mergeReleaseJniLibFolders UP-TO-DATE
+:modules:data:transformNativeLibsWithMergeJniLibsForRelease UP-TO-DATE
+:modules:data:transformNativeLibsWithSyncJniLibsForRelease UP-TO-DATE
+:modules:data:bundleRelease UP-TO-DATE
+:app:prepareDebugDependencies
+:app:compileDebugRenderscript UP-TO-DATE
+:app:generateDebugResValues UP-TO-DATE
+:app:generateDebugResources UP-TO-DATE
+:app:mergeDebugResources UP-TO-DATE
+:app:dataBindingProcessLayoutsDebug UP-TO-DATE
+:app:compileDebugAidl UP-TO-DATE
+:app:generateDebugBuildConfig UP-TO-DATE
+:app:processDebugManifest UP-TO-DATE
+:app:processDebugResources UP-TO-DATE
+:app:generateDebugSources UP-TO-DATE
+:app:dataBindingExportBuildInfoDebug UP-TO-DATE
+:app:incrementalDebugJavaCompilationSafeguard UP-TO-DATE
+:app:javaPreCompileDebug
+:app:transformClassesAndDataBindingWithDataBindingMergeArtifactsForDebug UP-TO-DATE
+:app:kaptGenerateStubsDebugKotlin UP-TO-DATE
+:app:kaptDebugKotlin UP-TO-DATE
+:app:compileDebugKotlin UP-TO-DATE
+:app:compileDebugJavaWithJavac UP-TO-DATE
+:app:copyDebugKotlinClasses UP-TO-DATE
+:app:compileDebugNdk NO-SOURCE
+:app:compileDebugSources UP-TO-DATE
+:app:mergeDebugShaders UP-TO-DATE
+:app:compileDebugShaders UP-TO-DATE
+:app:generateDebugAssets UP-TO-DATE
+:app:mergeDebugAssets UP-TO-DATE
+:app:transformClassesWithDexForDebug UP-TO-DATE
+:app:mergeDebugJniLibFolders UP-TO-DATE
+:app:transformNativeLibsWithMergeJniLibsForDebug UP-TO-DATE
+:app:processDebugJavaRes NO-SOURCE
+:app:transformResourcesWithMergeJavaResForDebug UP-TO-DATE
+:app:validateSigningDebug
+:app:packageDebug UP-TO-DATE
+:app:assembleDebug UP-TO-DATE
+
+BUILD SUCCESSFUL
+
+Total time: 6.299 secs

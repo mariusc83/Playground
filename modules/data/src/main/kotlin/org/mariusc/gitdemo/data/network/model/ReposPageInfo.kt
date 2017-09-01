@@ -10,11 +10,11 @@ import java.util.*
  * Created by MConstantin on 4/28/2017.
  */
 
-data class ReposPageInfo(@PrimaryKey @ColumnInfo(name = "current_since") var currentSince: String,
-                         @ColumnInfo(name = "next_since") var nextSince: String,
-                         @ColumnInfo(name = "has_next") var hasNext: Boolean){
+data class ReposPageInfo(@PrimaryKey @ColumnInfo(name = "current_since") val currentSince: String = "",
+                         @ColumnInfo(name = "next_since") val nextSince: String = "",
+                         @ColumnInfo(name = "has_next") val hasNext: Boolean = false) {
 
-    @Ignore constructor():this(UUID.randomUUID().toString(), "", false)
+    @Ignore constructor() : this(UUID.randomUUID().toString(), "", false)
 }
 
 

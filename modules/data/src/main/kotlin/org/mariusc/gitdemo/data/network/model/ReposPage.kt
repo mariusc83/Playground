@@ -2,6 +2,7 @@ package org.mariusc.gitdemo.data.network.model
 
 
 import android.arch.persistence.room.*
+import org.mariusc.gitdemo.data.network.persistence.db.ReposDatabase
 import kotlin.collections.emptyList;
 
 /**
@@ -9,9 +10,13 @@ import kotlin.collections.emptyList;
  */
 
 
-@Entity(tableName = "pages",primaryKeys = arrayOf("current_since"))
-data class ReposPage(@ColumnInfo(name = "has_more") override var hasMore: Boolean = false,
-                     @ColumnInfo(name = "is_first") override var isFirst: Boolean = false,
-                     @Embedded
-                     var pageInfo: ReposPageInfo = ReposPageInfo(),
-                     @Ignore override var data: List<RepoModel> = emptyList()) : Page
+@Entity(tableName = ReposDatabase.PAGES, primaryKeys = arrayOf("current_since"))
+data class ReposPage(@ColumnInfo(name = "has_more") override val hasMore: Boolean = false,
+                     @ColumnInfo(name = "is_first") override val isFirst: Boolean = false,
+                     @Embedded val pageInfo: ReposPageInfo = ReposPageInfo()) : Page{
+    @Ignore
+    override var data: List<RepoModel> = emptyList()
+
+    @Ignore
+    constructor():this(false,false, ReposPageInfo())
+}

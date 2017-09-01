@@ -105,4 +105,39 @@ class PagesDaoTest : BaseDaoTest() {
         // then
         assert(pagesDao.pages().size == 0)
     }
+
+    @Test
+    fun updates_a_page_entry_when_requested(){
+        // given
+        val pageToAdd = ReposPage(false, true, ReposPageInfo())
+        pagesDao.insert(pageToAdd)
+
+        // when
+        val toUpdatePage=pageToAdd.copy(hasMore = true)
+        pagesDao.update(toUpdatePage)
+
+        // then
+        val addedPage=pagesDao.reposPage(pageToAdd.pageInfo.currentSince)
+        assert(addedPage.hasMore)
+    }
+
+    @Test
+    fun updates_multiple_entries_when_requested(){
+        // given
+        val pageToAdd1 = ReposPage(false, true, ReposPageInfo())
+        val pageToAdd2 = ReposPage(false, true, ReposPageInfo())
+        pagesDao.insert(pageToAdd1)
+        pagesDao.insert(pageToAdd2)
+
+        // when
+        val toUpdatePage1=pageToAdd1.copy(hasMore = true)
+        val toUpdatePage2=pageToAdd2.copy(hasMore = true)
+        pagesDao.update(toUpdatePage1,toUpdatePage2)
+
+        // then
+        val addedPages=pagesDao.pages()
+        addedPages.forEach{
+            assert(it.hasMore)
+        }
+    }
 }

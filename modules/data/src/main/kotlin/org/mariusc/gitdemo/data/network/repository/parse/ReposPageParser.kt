@@ -32,7 +32,9 @@ class ReposPageParser {
             }
         }
         val pageInfo = ReposPageInfo(currentSince, nextSince, hasNext)
-        return ReposPage(pageInfo.hasNext, isFirstPage(pageInfo), pageInfo, data)
+        return ReposPage(pageInfo.hasNext, isFirstPage(pageInfo), pageInfo).apply {
+            this.data = data
+        }
     }
 
     private fun isFirstPage(pageInfo: ReposPageInfo): Boolean {
